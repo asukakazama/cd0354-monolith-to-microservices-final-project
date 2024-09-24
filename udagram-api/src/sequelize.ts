@@ -1,7 +1,6 @@
 import {Sequelize} from 'sequelize-typescript';
 import {config} from './config/config';
 
-
 export const sequelize = new Sequelize({
   'username': config.username,
   'password': config.password,
@@ -9,5 +8,12 @@ export const sequelize = new Sequelize({
   'host': config.host,
 
   'dialect': config.dialect,
+  // config ssl parameter
+  "dialectOptions": {
+        "ssl": {
+            "require": true,
+            "rejectUnauthorized": false
+        }
+    },
   'storage': ':memory:',
 });
