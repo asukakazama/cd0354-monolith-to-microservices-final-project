@@ -30,8 +30,8 @@ jobs:
             docker build -t udagram-frontend ./udagram-frontend
             docker tag udagram-frontend asukakazama/udagram-frontend:v1
 
-            docker build -t reverseproxy ./reverseproxy
-            docker tag reverseproxy asukakazama/reverseproxy:v1
+            docker build -t udagram-reverseproxy ./udagram-reverseproxy
+            docker tag udagram-reverseproxy asukakazama/reverseproxy:v1
 
             echo "Build successfully !"
       - run:
