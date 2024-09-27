@@ -28,7 +28,7 @@ jobs:
             docker build -t reverseproxy ./reverseproxy
             docker tag reverseproxy asukakazama/reverseproxy:v1
 
-            echo "Build successfully !!!"
+            echo "Build successfully !"
       - run:
           name: Push Docker Image to DockerHub
           command: |
@@ -41,7 +41,7 @@ jobs:
             docker push asukakazama/udagram-frontend:v1
             docker push asukakazama/reverseproxy:v1
 
-            echo "Push successfully !!!"
+            echo "Push successfully !"
 
 workflows:
   default:
