@@ -1,22 +1,14 @@
 version: 2.1
 
-executors:
-  node-executor:
+jobs:
+  build_docker:
     docker:
       - image: circleci/node:16
-
-jobs:
-  install_dependencies:
-    executor: node-executor
     steps:
       - checkout
-      - run: ls -al
-      - run: npm install
-
-  build_docker:
-    executor: node-executor
-    steps:
-      - checkout
+      - run: 
+          name: Install Dependencies
+          command: npm install
       - setup_remote_docker:
           version: default
       - run: 
@@ -54,7 +46,4 @@ jobs:
 workflows:
   default:
     jobs:
-      - install_dependencies
-      - build_docker:
-          requires:
-            - install_dependencies
+      - build_docker
