@@ -4,7 +4,6 @@ executors:
   node-executor:
     docker:
       - image: circleci/node:16
-    working_directory: ~/repo
 
 jobs:
   install_dependencies:
