@@ -6,6 +6,11 @@ jobs:
       - image: circleci/node:16
     steps:
       - checkout
+      - run:
+          name: Log all files and directories
+          command: |
+            echo "Logging directory contents..."
+            ls -al
       - run: 
           name: Install Dependencies
           command: npm install
