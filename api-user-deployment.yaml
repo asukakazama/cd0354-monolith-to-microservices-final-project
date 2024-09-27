@@ -28,37 +28,37 @@ spec:
                   key: POSTGRES_PASSWORD
             - name: POSTGRES_HOST
               valueFrom:
-                configMapRef:
+                configMapKeyRef:
                   name: env-config
                   key: POSTGRES_HOST
             - name: POSTGRES_DB
               valueFrom:
-                configMapRef:
+                configMapKeyRef:
                   name: env-config
                   key: POSTGRES_DB
             - name: AWS_BUCKET
               valueFrom:
-                configMapRef:
+                configMapKeyRef:
                   name: env-config
                   key: AWS_BUCKET
             - name: AWS_REGION
               valueFrom:
-                configMapRef:
+                configMapKeyRef:
                   name: env-config
                   key: AWS_REGION
             - name: AWS_PROFILE
               valueFrom:
-                configMapRef:
+                configMapKeyRef:
                   name: env-config
                   key: AWS_PROFILE
             - name: JWT_SECRET
               valueFrom:
-                configMapRef:
+                configMapKeyRef:
                   name: env-config
                   key: JWT_SECRET
             - name: URL
               valueFrom:
-                configMapRef:
+                configMapKeyRef:
                   name: env-config
                   key: URL
           volumeMounts:
