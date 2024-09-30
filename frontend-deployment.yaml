@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: asukakazama/udagram-frontend:v1
+          image: asukakazama/udagram-frontend:v3
           ports:
             - containerPort: 8080
           resources:
