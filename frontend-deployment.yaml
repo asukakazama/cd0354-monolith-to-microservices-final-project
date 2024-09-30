@@ -16,7 +16,7 @@ spec:
         - name: frontend
           image: asukakazama/udagram-frontend:v3
           ports:
-            - containerPort: 8080
+            - containerPort: 8100
           resources:
             limits:
               cpu: 500m
